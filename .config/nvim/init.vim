@@ -2,10 +2,10 @@
 " - For Neovim: stdpath('data') . '/plugged'
 call plug#begin(stdpath('data') . '/plugged')
 
-" On-demand loading
+" File explorer/browser(enabled on-demand)
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-" Use release branch (recommend)
+" Completion like VSCode.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Initialize plugin system
