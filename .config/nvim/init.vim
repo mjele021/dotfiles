@@ -33,5 +33,12 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+" ------------------------------------------------------------
+" Nvim configuration
+" ------------------------------------------------------------
+
 " Highlight a selection on yank
 au TextYankPost * silent! lua vim.highlight.on_yank()
+set number              " Enable line numbers
+set mouse=a             " Enable mouse drag on window splits
+set splitbelow          " Always split below
