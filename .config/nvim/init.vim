@@ -8,6 +8,9 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Completion like VSCode.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" a class/functions/variables outline viewer
+Plug 'preservim/tagbar'
+
 " Initialize plugin system
 call plug#end()
 
@@ -49,3 +52,5 @@ set splitbelow          " Always split below
 
 " NERDTree
 nmap        <F2>      :NERDTreeToggle<CR>
+" tagbar
+nmap        <F8>      :TagbarToggle<CR>
