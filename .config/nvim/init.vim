@@ -17,9 +17,11 @@ Plug 'vim-airline/vim-airline'
 " Initialize plugin system
 call plug#end()
 
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+" ------------------------------------------------------------
+" coc-nvim configuration
+" ------------------------------------------------------------
 
+" this are used in the keybindings, not by themselves
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -30,14 +32,10 @@ function! s:show_documentation()
   endif
 endfunction
 
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " ------------------------------------------------------------
 " vim-airline configuration
@@ -63,3 +61,14 @@ set splitbelow          " Always split below
 nmap        <F2>      :NERDTreeToggle<CR>
 " tagbar
 nmap        <F8>      :TagbarToggle<CR>
+
+" coc-nvim
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
