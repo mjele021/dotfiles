@@ -42,3 +42,10 @@ au TextYankPost * silent! lua vim.highlight.on_yank()
 set number              " Enable line numbers
 set mouse=a             " Enable mouse drag on window splits
 set splitbelow          " Always split below
+
+" ------------------------------------------------------------
+" Key mappings
+" ------------------------------------------------------------
+
+" NERDTree
+nmap        <F2>      :NERDTreeToggle<CR>
