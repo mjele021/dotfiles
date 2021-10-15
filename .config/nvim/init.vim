@@ -11,6 +11,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " a class/functions/variables outline viewer
 Plug 'preservim/tagbar'
 
+" Lean & mean status/tabline
+Plug 'vim-airline/vim-airline'
+
 " Initialize plugin system
 call plug#end()
 
@@ -35,6 +38,12 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" ------------------------------------------------------------
+" vim-airline configuration
+" ------------------------------------------------------------
+let g:airline_powerline_fonts = 1
+
 
 " ------------------------------------------------------------
 " Nvim configuration
