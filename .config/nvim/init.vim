@@ -52,6 +52,9 @@ au TextYankPost * silent! lua vim.highlight.on_yank()
 set number              " Enable line numbers
 set mouse=a             " Enable mouse drag on window splits
 set splitbelow          " Always split below
+set tabstop=4           " number of visual spaces per TAB
+set shiftwidth=4        " Number of spaces to use for autoindent
+set expandtab           " Make tabs spaces
 
 " ------------------------------------------------------------
 " Key mappings
