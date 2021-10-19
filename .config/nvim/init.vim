@@ -51,6 +51,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Highlight a selection on yank
 au TextYankPost * silent! lua vim.highlight.on_yank()
 set number              " Enable line numbers
+set relativenumber      " Enable line numbers relative to with the cursor
 set mouse=a             " Enable mouse drag on window splits
 set splitbelow          " Always split below
 set tabstop=4           " number of visual spaces per TAB
