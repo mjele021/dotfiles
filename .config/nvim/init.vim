@@ -56,7 +56,9 @@ set splitbelow          " Always split below
 set tabstop=4           " number of visual spaces per TAB
 set shiftwidth=4        " Number of spaces to use for autoindent
 set expandtab           " Make tabs spaces
-set signcolumn=number   " Merge signcolumn and number column into one
+if has("nvim-0.5.0")
+    set signcolumn=number   " Merge signcolumn and number column into one
+endif
 
 " ------------------------------------------------------------
 " Key mappings
