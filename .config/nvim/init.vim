@@ -14,6 +14,9 @@ Plug 'preservim/tagbar'
 " Lean & mean status/tabline
 Plug 'vim-airline/vim-airline'
 
+" theme
+Plug 'morhetz/gruvbox'
+
 " Initialize plugin system
 call plug#end()
 
@@ -59,6 +62,10 @@ set shiftwidth=4        " Number of spaces to use for autoindent
 set expandtab           " Make tabs spaces
 if has("nvim-0.5.0")
     set signcolumn=number   " Merge signcolumn and number column into one
+endif
+
+if (has("termguicolors"))
+    set termguicolors
 endif
 
 " ------------------------------------------------------------
