@@ -1,0 +1,27 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+
+""" Common settings -------------------------
+set showmode
+set scrolloff=5
+set incsearch
+set relativenumber
+
+""" Idea specific settings ------------------
+set ideajoin
+" set ideastatusicon=gray
+" set idearefactormode=keep
+
+""" Mappings --------------------------------
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+map <leader>c <Action>(Stop)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <S-Space> <Action>(GotoNextError)
+
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
