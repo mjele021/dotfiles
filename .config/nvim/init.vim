@@ -5,9 +5,6 @@ call plug#begin(stdpath('data') . '/plugged')
 " File explorer/browser(enabled on-demand)
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-" a class/functions/variables outline viewer
-Plug 'preservim/tagbar'
-
 " Lean & mean status/tabline
 Plug 'vim-airline/vim-airline'
 
@@ -44,5 +41,3 @@ set expandtab           " Make tabs spaces
 
 " NERDTree
 nmap        <F2>      :NERDTreeToggle<CR>
-" tagbar
-nmap        <F8>      :TagbarToggle<CR>
