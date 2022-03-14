@@ -24,6 +24,7 @@ colorscheme slate
 " Highlight a selection on yank
 au TextYankPost * silent! lua vim.highlight.on_yank()
 set number
+set relativenumber
 set mouse=a             " Enable mouse drag on window splits
 set splitbelow          " Always split below
 set tabstop=4           " number of visual spaces per TAB
